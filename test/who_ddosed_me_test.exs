@@ -1,6 +1,5 @@
 defmodule WhoDdosedMeTest do
   use ExUnit.Case
-  doctest WhoDdosedMe
 
   defmodule FileDispenserMock do
     def gets(_) do

@@ -13,7 +13,7 @@ defmodule WhoDdosedMe.FileHandlerTest do
 
   test "Parses each line" do
     results = WhoDdosedMe.FileHandler.process_file(@test_data, TestAdapter)
-    assert length(results) == 3
+    assert length(results) == 2
   end
 
 end

@@ -6,7 +6,7 @@ defmodule SSHAnalyzerAdapterTest do
   test "Parses valid log" do
     {:ok, result } = WhoDdosedMe.SSHAnalyzerAdapter.parse(@sample_valid_log)
     assert result.ip == "221.122.101.203"
-    assert result.extras[:port] == "51041"
+    assert result.extra[:port] == "51041"
   end
 
   test "fails to parse" do
