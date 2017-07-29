@@ -1,21 +1,11 @@
-# WhoDdosedMeCore
+# Who DDOS-ed me...
 
-**TODO: Add description**
+Open Source library for analyzing logs. You need to supply data-stream or file name and adapter.
 
-## Installation
+Adapter is any module that adopted `WhoDdosedMe.AnalyzerPort` behaviour. Parse should take a line of log and return `WhoDdosedMe.ScanResult`.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `who_ddosed_me_core` to your list of dependencies in `mix.exs`:
+## Usage
 
-```elixir
-def deps do
-  [
-    {:who_ddosed_me_core, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/who_ddosed_me_core](https://hexdocs.pm/who_ddosed_me_core).
-
+You can either:
+- use `FileHandler.handle_multiple_files(file_names, adapter)`
+- use `FileHandler.process_file(enumarable, adapter)`, it will accept any enumerable
