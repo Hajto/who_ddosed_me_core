@@ -1,5 +1,5 @@
 defmodule WhoDdosedMe.AnalyzerPort do
-  @callback parse(String.t) :: any
+  @callback parse(String.t) :: Struct.t
 
   def adapter("sshlogin"), do: WhoDdosedMe.SSHAnalyzerAdapter
 
